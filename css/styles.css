@@ -20,12 +20,16 @@
     border: none;
     border-radius: 2px;
     color: #dcdcdc;
+    height: 40px;
+}
+.main-container {
+    padding-bottom: 40px;
 }
 
 .main-container-interface {
     display: flex;
     position: relative;
-    height: 700px;
+    height: calc(100vh - 56px - 54px - 40px);
     padding: 0 8px;
     overflow: hidden;
 }
@@ -42,7 +46,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.507);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .page-indicator-right {
@@ -51,19 +55,102 @@
 
 .participants-container {
     display: flex;
-    align-self: center;
+    align-self: flex-start;
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: center;
 }
 
 .participants-card {
-    width: calc(100% / 5);
     max-width: 250px;
     max-height: 170px;
     border: 2px solid transparent;
+    position: relative;
+}
+
+.participants-card:hover {
+    background: chartreuse;
 }
 
 .participants-card img {
     max-width: 100%;
+}
+
+.participants-card-username {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: lightgray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.participants-card-username i {
+    display: none;
+}
+
+.participants-card:active .participants-card-username i {
+    display: unset;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    color: #dcdcdc;
+    background-color: #232427;
+    text-align: center;
+    padding: 10px;
+    padding-right: 0;
+    height: 56px;
+}
+
+.footer-button {
+    display: flex;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+}
+
+.button {
+    padding-right: 7px;
+}
+
+.button-expand-menu i {
+    transform: rotate(180deg);
+}
+
+.participants {
+    position: relative;
+}
+
+.participants-number {
+    position: absolute;
+    left: 60%;
+    top: 0;
+    font-size: 12px;
+}
+
+.button-share {
+    color: lightgreen;
+}
+
+.button-rec {
+    position: relative;
+}
+
+.button-rec-icon {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+}
+
+.footer-button button {
+    font-size: 16px;
+    padding: 4px;
+    background-color: #393939;
+    border: none;
+    border-radius: 2px;
+    color: #dcdcdc;
 }
